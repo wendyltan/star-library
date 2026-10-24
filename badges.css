@@ -1,0 +1,108 @@
+/* Star Library / illustrated stamp-style achievement gallery.
+   Each award contains its own original illustrated SVG; no Unicode icons.
+   No online fonts, image downloads or JS libraries. */
+.achievements{padding-top:96px;padding-bottom:98px}
+.badge-section-heading{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:30px}
+.badge-heading-copy h2{font-size:35px;letter-spacing:-1.1px;margin:12px 0}.badge-heading-copy h2 span{font-weight:400;color:#d8af78}
+.badge-heading-copy>p:last-child{font-size:14px;color:#647064;line-height:1.7;margin:0}
+.badge-achievement-summary{min-width:214px;border-radius:19px 19px 12px 12px;background:#f4e4d2;border:1px solid #e9d4bd;text-align:center;padding:15px 19px 12px;transform:rotate(2deg);box-shadow:4px 7px 0 #d9c4ad30}
+.badge-achievement-summary>span{font:11px Georgia,serif;letter-spacing:1.7px;color:#926f62}
+.badge-achievement-summary strong{font:700 47px Georgia,serif;line-height:1.4;color:#a87c60;display:block}
+.badge-achievement-summary strong em{font:500 19px Georgia,serif;color:#ab9c86}
+.badge-achievement-summary>p{font-size:11px;color:#866f65;margin:0}
+.badge-hero-frame{background:#e4eee3;border:1px solid #d1ded0;border-radius:23px;padding:35px 46px;display:grid;grid-template-columns:1.15fr 1fr;gap:16px;min-height:257px;position:relative;overflow:hidden}
+.badge-hero-frame:before{content:"";position:absolute;width:410px;height:410px;border-radius:50%;border:1px dashed #a7c7ad;right:-130px;top:-130px}
+.badge-hero-frame:after{content:"✳";position:absolute;font-size:120px;color:#f8fffa95;right:45px;bottom:-63px;pointer-events:none}
+.badge-hero-left{z-index:1;padding:5px 0}
+.badge-hero-bloom{font-size:20px;color:#ba8b71;margin:0 0 15px}.badge-hero-bloom span{font:italic 14px Georgia,serif;letter-spacing:.3px;margin-left:8px;color:#718c75}
+.badge-hero-left strong{font-size:24px;display:block;line-height:1.35;letter-spacing:-.5px}
+.badge-hero-left>p{font-size:12px;color:#677e6e;line-height:1.9;margin:12px 0}
+.badge-hero-left .badge-first-day{font-size:11px;color:#84786e;font-weight:750}
+.badge-hero-right{display:flex;align-items:center;justify-content:center;gap:3px;z-index:2}
+.badge-feature{--badge-tilt:0deg;position:relative;width:125px;height:140px;display:flex;align-items:center;justify-content:flex-start;flex-direction:column;transform:rotate(var(--badge-tilt));margin-inline:-2px}
+.badge-feature:nth-child(1){--badge-tilt:-14deg}.badge-feature:nth-child(2){--badge-tilt:7deg;z-index:1;transform:translateY(-10px) rotate(var(--badge-tilt))}.badge-feature:nth-child(3){--badge-tilt:17deg}
+.badge-feature .badge-medal{width:122px;height:122px}
+.badge-feature small{text-align:center;font-size:11px;color:#597364;font-weight:800;margin-top:10px;line-height:1.35}
+.badge-gallery-header{display:flex;justify-content:space-between;align-items:center;margin:54px 0 20px;gap:12px}
+.badge-gallery-header h3{margin:0 0 5px;font-size:24px}.badge-gallery-header p{font-size:12px;color:#738177;margin:0}
+.badge-view-options{display:flex;gap:6px;border:1px solid #e0e6da;background:#fafbf6;border-radius:12px;padding:5px}
+.badge-status{border:0;background:transparent;color:#68776b;border-radius:8px;padding:9px 13px;font-size:12px;font-weight:750}
+.badge-status[aria-pressed=true]{background:#d6e8d9;color:#385d47}
+.badge-family-tabs{display:flex;gap:10px;overflow-x:auto;scrollbar-width:thin;padding:3px 3px 18px}
+.badge-family-tabs button{white-space:nowrap;border:1px solid #e2e2d6;background:#fffefa;padding:10px 17px;border-radius:25px;font-weight:750;color:#738175;font-size:12px;transition:transform .14s}
+.badge-family-tabs button[aria-pressed=true]{color:#3f7054;background:#deedde;border-color:#bbd4c1}
+.badge-family-tabs button:hover{transform:translateY(-2px)}
+.badge-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px;min-height:190px}
+.badge-card{--ring:#d9b67b;--glow:#f7e6bc;min-width:0;min-height:282px;padding:20px 16px 17px;text-align:center;background:#fffdfa;border-radius:18px;border:1px solid #e9e4d7;display:flex;flex-direction:column;align-items:center;box-shadow:0 7px 15px #665f4e0d;position:relative;transition:transform .2s,box-shadow .2s;cursor:pointer;color:#424d45}
+.badge-card:before{content:"✦";position:absolute;top:12px;right:15px;font-size:15px;color:var(--ring)}
+.badge-card:hover{transform:translateY(-5px);box-shadow:0 15px 28px #665f4e25}
+.badge-card:focus-visible{outline:3px solid #91b7a0;outline-offset:3px}
+.badge-card[data-group="分类漫游"]{--ring:#d7a1ab;--glow:#f7e5e7}
+.badge-card[data-group="研究室"]{--ring:#97b8b1;--glow:#e1f0e9}
+.badge-card[data-group="作者宇宙"]{--ring:#b2a5cc;--glow:#efebfa}
+.badge-card[data-group="探索足迹"]{--ring:#9cb5d6;--glow:#e4ecfb}
+.badge-medal{position:relative;width:116px;height:116px;border:0;background:transparent;display:grid;place-items:center;margin:-2px auto 8px;filter:drop-shadow(0 5px 4px #705b4b14)}
+.badge-medal:before{content:none}
+.badge-medal:after{content:none}
+.badge-artwork{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;transform:rotate(-3deg)}
+.badge-card[data-locked="true"]{background:#f9f8f4;opacity:.78}
+.badge-card[data-locked="true"] .badge-medal{filter:grayscale(1);opacity:.5}
+.badge-card[data-locked="true"] .badge-artwork{opacity:.68}
+.badge-id{font:11px Georgia,serif;color:#a29f91;letter-spacing:1px}
+.badge-title{font-size:15px;font-weight:850;margin:8px 0 6px;line-height:1.4}
+.badge-criteria{font-size:11px;line-height:1.55;color:#7d877e;min-height:36px}
+.badge-progress{margin-top:auto;width:100%}
+.badge-track{height:6px;border-radius:20px;background:#eee9df;overflow:hidden;margin-top:10px}
+.badge-track span{display:block;height:100%;width:0;background:var(--ring);border-radius:20px}
+.badge-progress-text{display:flex;justify-content:space-between;align-items:center;gap:5px;color:#6c8072;font-size:10px;font-weight:700;margin-top:8px}
+.badge-ribbon{position:absolute;top:13px;left:-8px;font-size:10px;font-weight:800;background:#f4dbae;color:#986e45;padding:7px 11px;transform:rotate(-7deg);border-radius:3px 6px 6px 3px;box-shadow:0 3px 8px #996f4630}
+.badge-card[data-locked="true"] .badge-ribbon{background:#e4e1da;color:#90938d;box-shadow:none}
+.badge-gallery-bottom{text-align:center;display:flex;flex-direction:column;align-items:center;gap:13px;padding-top:29px}
+.badge-gallery-bottom p{font-size:11px;color:#7c897e;margin:0;line-height:1.7}
+.badge-gallery-empty{text-align:center;color:#6c8272;font-size:13px;padding:35px;border:1px dashed #d6dfd4;border-radius:13px;background:#f9fbf6;grid-column:1/-1}
+.badge-detail-dialog{position:fixed;width:min(420px,calc(100% - 28px));border:1px solid #ebdfcf;border-radius:20px;background:#fffdf7;padding:30px;text-align:center;color:#3d4b41;box-shadow:0 25px 70px #2c362837}
+.badge-detail-dialog::backdrop{background:#344e4399;backdrop-filter:blur(4px)}
+.badge-detail-close{position:absolute;right:16px;top:15px;border:0;border-radius:50%;width:35px;height:35px;font-size:23px;background:#f4eee5;color:#718274}
+.badge-detail-ornament .badge-medal{width:165px;height:165px;margin:8px auto 19px}
+.badge-detail-family{font-size:12px;color:#8c948b;letter-spacing:1px;margin:0}
+.badge-detail-dialog h2{font-size:24px;letter-spacing:-.4px;margin:10px 0}
+.badge-detail-dialog>p#badge-detail-description{font-size:13px;color:#79857b;line-height:1.75}
+.badge-detail-progress{font-size:13px;color:#617a68;background:#eff5ed;border-radius:10px;padding:13px;margin:16px 0}
+.badge-detail-date{font-size:12px;color:#a57b6d;margin:16px 0 5px}
+@media(max-width:1050px){.badge-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.badge-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.badge-hero-frame{padding:30px;grid-template-columns:1fr}.badge-hero-right{justify-content:flex-start}.badge-feature{width:115px;height:130px}.badge-section-heading{align-items:flex-start}}
+@media(max-width:580px){.achievements{padding:69px 0}.badge-section-heading{align-items:flex-start;flex-direction:column}.badge-heading-copy h2{font-size:28px}.badge-achievement-summary{align-self:flex-end;margin-top:-5px;padding:9px 17px;min-width:170px}.badge-achievement-summary strong{font-size:36px}.badge-hero-frame{padding:24px 21px}.badge-hero-left strong{font-size:20px}.badge-hero-right{gap:0;justify-content:space-between}.badge-feature{width:99px}.badge-feature .badge-medal{width:94px;height:94px}.badge-feature small{font-size:10px}.badge-gallery-header{flex-direction:column;align-items:stretch}.badge-view-options{align-self:flex-start}.badge-gallery{gap:10px}.badge-card{padding:18px 10px 15px;min-height:256px}.badge-medal{width:83px;height:83px}.badge-artwork{width:100%;height:100%}.badge-title{font-size:13px}.badge-criteria{font-size:10px}.badge-ribbon{font-size:9px}.badge-card:before{display:none}}
+@media(prefers-reduced-motion:reduce){.badge-card,.badge-family-tabs button{transition:none}}
+
+
+/* Illustrated sticker details: the whole SVG is the badge, not a symbol inside
+   a repeated manufactured medal ring. Tiny variation makes a scrapbook. */
+.badge-card{min-height:294px;background:linear-gradient(150deg,#fffdfa,#fff9ef);border-color:#eadfd1}
+.badge-card[data-group="分类漫游"]{background:linear-gradient(150deg,#fffdfa,#fff5f5)}
+.badge-card[data-group="研究室"]{background:linear-gradient(150deg,#fffefa,#f4faf5)}
+.badge-card[data-group="作者宇宙"]{background:linear-gradient(150deg,#fffdfa,#f8f5fc)}
+.badge-card[data-group="探索足迹"]{background:linear-gradient(150deg,#fffdfa,#f5f9ff)}
+.badge-card:nth-child(4n+1) .badge-artwork{transform:rotate(-7deg)}
+.badge-card:nth-child(4n+2) .badge-artwork{transform:rotate(5deg)}
+.badge-card:nth-child(4n+3) .badge-artwork{transform:rotate(-2deg)}
+.badge-card:nth-child(4n+4) .badge-artwork{transform:rotate(7deg)}
+.badge-card[data-locked="true"] .badge-medal{filter:grayscale(.8);opacity:.48}
+.badge-card[data-locked="true"] .badge-artwork{opacity:1}
+.badge-card[data-locked="true"]{opacity:1}
+.badge-card .badge-medal{transition:transform .18s ease}
+.badge-card:hover .badge-medal{transform:translateY(-3px)}
+@media(max-width:580px){.badge-card{min-height:272px}.badge-card .badge-medal{width:93px;height:93px;margin-bottom:6px}}
+@media(prefers-reduced-motion:reduce){.badge-card .badge-medal{transition:none}}
+
+/* Deeper ink on cream and pastel stock keeps supporting text readable. */
+.badge-achievement-summary>span{color:#715346}
+.badge-achievement-summary strong em{color:#72574e}
+.badge-achievement-summary>p{color:#654f47}
+.badge-hero-bloom span{color:#4c6a57}
+.badge-hero-left>p{color:#536d5a}
+.badge-first-day{color:#5a6d59}
+.badge-id{color:#635d56}
+.badge-criteria{color:#53675b}
+.badge-progress-text{color:#4f6657}
+.badge-gallery-header p,.badge-gallery-bottom p{color:#54685a}
+.badge-detail-dialog>p#badge-detail-description{color:#53685b}
