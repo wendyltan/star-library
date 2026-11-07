@@ -1,0 +1,54 @@
+/* Weekly personalized discoveries: pastel editorial cards, not another table. */
+.discover{padding-top:92px;padding-bottom:101px}
+.discover-head{display:flex;justify-content:space-between;gap:28px;align-items:flex-end}
+.discover-eyebrow{font-size:11px;color:#8e625e;letter-spacing:1.4px;font-weight:800;margin:0 0 12px}
+.discover h2{font-size:35px;letter-spacing:-.8px;margin:0 0 14px}
+.discover h2 span{font-weight:400;color:#e3b67f;font-size:30px}
+.discover-head p:not(.discover-eyebrow){font-size:14px;color:#586e62;line-height:1.85;margin:0}
+.discover-side{align-self:center;display:flex;gap:23px;align-items:center}
+.discover-date{font-size:12px;color:#657a6c;white-space:nowrap}
+.discover-stamp{width:86px;height:86px;border:2px dashed #d1a383;border-radius:100%;display:grid;place-items:center;color:#906e61;font:italic 16px/1.1 Georgia,serif;text-align:center;transform:rotate(11deg);background:#f9e5c9}
+.discover-categories{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px;margin-bottom:23px;min-height:10px}
+.discover-chip{display:inline-flex;align-items:center;border:1px solid #d8ded2;border-radius:99px;background:#fffef9;color:#586c5e;padding:9px 14px;font-size:12px;font-weight:720;min-height:39px;transition:background .2s,border .2s}
+.discover-chip[aria-pressed="true"]{background:#d9eada;color:#365747;border-color:#9bbaa8}
+.discover-chip:hover{background:#eaf5e9}
+.discover-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.discover-card{min-width:0;position:relative;min-height:270px;border-radius:16px;border:1px solid #e5e4d9;background:#fffefa;padding:20px 21px 19px;box-shadow:0 9px 19px #655f490e;display:flex;flex-direction:column;transition:transform .16s,box-shadow .16s;overflow:hidden}
+.discover-card:hover{transform:translateY(-3px);box-shadow:0 18px 30px #655f491b}
+.discover-card:nth-child(5n+1):before,.discover-card:nth-child(5n+4):before{background:#cfe4d3}
+.discover-card:nth-child(5n+2):before{background:#f5d9cd}
+.discover-card:nth-child(5n+3):before{background:#eee0b5}
+.discover-card:nth-child(5n+5):before{background:#ddd9ef}
+.discover-card:before{content:"";height:5px;position:absolute;inset:0 0 auto}
+.discover-badge{font-size:11px;font-weight:800;color:#547462;display:inline-block;background:#e8f1e8;padding:6px 9px;border-radius:7px}
+.discover-card h3{font-size:17px;font-weight:800;margin:17px 0 10px;line-height:1.4;overflow-wrap:anywhere}
+.discover-description{font-size:13px;color:#68766d;line-height:1.68;max-height:70px;overflow:hidden;min-height:42px;margin:0 0 8px}
+.discover-reason{font-size:12px;color:#816a5c;background:#f7f2e8;border-radius:10px;padding:11px 12px;line-height:1.5;margin:7px 0 13px}
+.discover-growth{margin-top:auto;display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+.discover-growth span{font-size:12px;color:#687870;white-space:nowrap}
+.discover-growth strong{font-size:22px;color:#3c7357;letter-spacing:-.6px;font-family:Georgia,serif}
+.discover-growth strong.month{color:#a57466}
+.discover-footer{margin-top:12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.discover-footer .total-stars{font-size:11px;color:#7d877b}
+.discover-footer a{font-size:12px;color:#446d5a;font-weight:800;text-decoration:underline;text-underline-offset:4px;padding:9px 0}
+.discover-footer a:focus-visible,.discover-chip:focus-visible{outline:3px solid #a0c6aa;outline-offset:3px}
+.discover-more{display:flex;flex-direction:column;align-items:center;gap:20px;margin-top:29px;text-align:center}
+.discover-more>span{font-size:11px;color:#738277;line-height:1.6}
+.discover-empty{font-size:14px;color:#657569;padding:39px 20px;background:#e7eee7;border-radius:16px;text-align:center}
+@media(max-width:970px){.discover-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.discover-stamp{display:none}}
+@media(max-width:600px){.discover{padding-top:69px;padding-bottom:76px}.discover h2{font-size:27px}.discover-head{display:block}.discover-date{display:block;margin-top:12px}.discover-grid{grid-template-columns:1fr}.discover-card{min-height:248px}.discover-categories{gap:7px}.discover-chip{font-size:11px;padding:7px 12px}.discover-more>span{font-size:11px}.discover-description{min-height:0}}
+
+.discover-discussion{font-size:11px;line-height:1.6;color:#536d62;
+  background:#edf5ef;border-radius:9px;margin:12px 0 0;padding:7px 10px;
+  font-weight:670}
+
+.discover-manage{border:1px solid #d6d6b4;border-radius:10px;background:#fff2d9;color:#6e664b;padding:8px;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap}
+.discover-manage:focus-visible{outline:3px solid #9ebba6;outline-offset:3px}
+
+/* Native GitHub Star link: retain the soft accent without looking like a disabled button. */
+.discover-footer a.discover-manage{display:inline-flex;align-items:center;justify-content:center;
+  min-height:36px;padding:8px 11px;border:1px solid #d6d6b4;border-radius:10px;
+  background:#fff2d9;color:#6e664b;font-size:11px;font-weight:800;
+  text-decoration:none;white-space:nowrap}
+.discover-footer a.discover-manage:hover{background:#fae7c6}
+.discover-footer{flex-wrap:wrap}
